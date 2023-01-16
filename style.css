@@ -15,7 +15,7 @@
     text-align: center;
     margin: auto;
     margin-top: 5em;
-    box-shadow: 0 0 5px;
+    box-shadow: 0 0 10px;
 }
 .row{
     display: flex;
@@ -26,7 +26,15 @@
     flex: 1;
     height: 10em;
     cursor: pointer;
-    border: 2px solid black;
+}
+div[data-row='1'],
+div[data-row='2']{
+    border-bottom: 5px solid black;
+}
+
+div[data-column='1'],
+div[data-column='2']{
+    border-right: 5px solid black;
 }
 button{
     padding: 1em 2em;
@@ -39,7 +47,6 @@ button{
 }
 button:hover{
     transform: scale(110%);
-
 }
 section{
     display: flex;
@@ -47,4 +54,8 @@ section{
     justify-content: center;
     align-items: center;
     margin: 3em;
+}
+section.confirmed{
+    opacity: 0;
+    pointer-events: none;
 }
