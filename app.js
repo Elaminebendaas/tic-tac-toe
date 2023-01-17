@@ -1,5 +1,11 @@
+let turnStatus = document.getElementById('status')
 const GameBoard = () =>{
-    let gameBoard = [[,,],[,,],[,,]]
+    let gameBoard = [['','',''],['','',''],['','','']]
+    let positionFill
+    const checkPosition = (x, y) =>{
+
+        return positionFill
+    }
     const posAddition = (x, y, symbol) =>{
 
     }
@@ -13,36 +19,31 @@ const AI = (symbol) =>{
 
 const Player = (symbol) =>{
     let playerSymbol = symbol
-    return{playerSymbol}
+    const turn = () =>{
+        turnStatus.innerHTML = 'It is your turn'
+    }
+    const turnDestroy = () =>{
+        turnStatus.innerHTML = ''
+    }
+    return{playerSymbol, turn, turnDestroy}
 }
-
+let playGrid = document.getElementById('container')
 const Game = (player) =>{
     let playerObj = player
+    let gameStatus = false
     let gameBoard = GameBoard()
     if(playerObj.playerSymbol == x){
         let aiObj = AI('O')  
     }else{
         let aiObj = AI('X')
     }
-
+    while (gameStatus != true){
+        playerObj.turn
+        playGrid.addEventListener('click', (e) =>{
+            
+        })
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -86,7 +87,10 @@ function oVerification(){
 function selectionConfirmation(){
     if(oBtn.classList.contains('selected') || xBtn.classList.contains('selected')){
         document.querySelector('section').classList.add('confirmed')
+        if(oBtn)
     }
+
+    
 
 }
 
