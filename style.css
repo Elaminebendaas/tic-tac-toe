@@ -45,6 +45,10 @@ button{
     box-shadow: 0 0 3px;
     transition: transform 0.15s ease-in-out;
 }
+button.selected{
+    background-color: black;
+    color: white;
+}
 button:hover{
     transform: scale(110%);
 }
