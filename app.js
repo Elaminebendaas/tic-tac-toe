@@ -9,7 +9,7 @@ const GameBoard = () =>{
     const posAddition = (x, y, symbol) =>{
 
     }
-    return{gameBoard, posAddition}
+    return{gameBoard, posAddition, checkPosition} 
 } 
 
 const AI = (symbol) =>{
@@ -36,12 +36,6 @@ const Game = (player) =>{
         let aiObj = AI('O')  
     }else{
         let aiObj = AI('X')
-    }
-    while (gameStatus != true){
-        playerObj.turn
-        playGrid.addEventListener('click', (e) =>{
-            
-        })
     }
 }
 
@@ -87,7 +81,9 @@ function oVerification(){
 function selectionConfirmation(){
     if(oBtn.classList.contains('selected') || xBtn.classList.contains('selected')){
         document.querySelector('section').classList.add('confirmed')
-        if(oBtn)
+        
+    }else{
+        document.getElementById('selection-caution').innerHTML = 'Please Select a Symbol!'
     }
 
     
