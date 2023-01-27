@@ -1,16 +1,16 @@
 let turnStatus = document.getElementById('status')
-const GameBoard = () =>{
-    let gameBoard = [['','',''],['','',''],['','','']]
+const GameBoard = (() =>{
+    let gameBoard = ['','','','','','','','','']
     let positionFill
-    const checkPosition = (x, y) =>{
+    const checkPosition = (x) =>{
 
         return positionFill
     }
-    const posAddition = (x, y, symbol) =>{
+    const posAddition = (x, symbol) =>{
 
     }
     return{gameBoard, posAddition, checkPosition} 
-} 
+})()
 
 const AI = (symbol) =>{
     let aiSymbol = symbol
@@ -32,11 +32,7 @@ const Game = (player) =>{
     let playerObj = player
     let gameStatus = false
     let gameBoard = GameBoard()
-    if(playerObj.playerSymbol == x){
-        let aiObj = AI('O')  
-    }else{
-        let aiObj = AI('X')
-    }
+ 
 }
 
 
